@@ -1,10 +1,13 @@
 package vangthao.tav.mynote;
 
 import android.content.Context;
+import android.graphics.Paint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,26 +66,51 @@ public class CongViecAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        TextView txtTen;
+        CheckBox checkBoxJobDone;
+        TextView txtTen, txtTimeAdded;
         ImageView imgDelete, imageEdit;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         final ViewHolder holder;
-        if(view == null){
+        if (view == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(layout,null);
-            holder.txtTen    = (TextView) view.findViewById(R.id.textViewTen);
-            holder.imgDelete = (ImageView) view.findViewById(R.id.imageViewDelete);
-            holder.imageEdit = (ImageView) view.findViewById(R.id.imageViewEdit);
+            view = inflater.inflate(layout, null);
+            holder.checkBoxJobDone = view.findViewById(R.id.checkboxJobDone);
+            holder.txtTen = view.findViewById(R.id.textViewTen);
+            holder.txtTimeAdded = view.findViewById(R.id.txt_time_add);
+            holder.imgDelete = view.findViewById(R.id.imageViewDelete);
+            holder.imageEdit = view.findViewById(R.id.imageViewEdit);
             view.setTag(holder);
-        }else {
+        } else {
             holder = (ViewHolder) view.getTag();
         }
         final CongViec congViec = congViecList.get(i);
+
+        if (congViec.getDone() == 1) {
+            holder.txtTen.setPaintFlags(holder.txtTen.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        } else {
+            holder.txtTen.setPaintFlags(holder.txtTen.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+        }
+        holder.checkBoxJobDone.setChecked(congViec.getDone() == 1);
         holder.txtTen.setText(congViec.getTenCV());
+        holder.txtTimeAdded.setText(congViec.getTimeAdded());
+
+        holder.checkBoxJobDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (holder.checkBoxJobDone.isChecked()) {
+                    Log.d("CongViecAdapter", "onClick: true");
+                    context.updateJobStatus(1, congViec.getIdCV());
+                } else {
+                    Log.d("CongViecAdapter", "onClick: false");
+                    context.updateJobStatus(0, congViec.getIdCV());
+
+                }
+            }
+        });
 
         //bắt sự kiện xóa và sửa cv
         holder.imageEdit.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +123,7 @@ public class CongViecAdapter extends BaseAdapter {
         holder.imgDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.DialogXoaCV(congViec.getTenCV(),congViec.getIdCV());
+                context.DialogXoaCV(congViec.getTenCV(), congViec.getIdCV());
             }
         });
         return view;

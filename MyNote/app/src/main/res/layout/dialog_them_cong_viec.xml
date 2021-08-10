@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="10dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/textThem"
@@ -10,27 +10,27 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Thêm công việc"
+        android:text="@string/text_add_job"
         android:textAlignment="center"
         android:textColor="#ff00"
-        android:textSize="30sp"
+        android:textSize="@dimen/font_size_16"
         android:textStyle="bold" />
 
     <EditText
-        android:textSize="26sp"
-        android:hint="Nhập tên công việc"
         android:id="@+id/editTextTenCV"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/textThem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textThem"
+        android:layout_marginTop="20dp"
+        android:hint="@string/type_job_name"
+        android:textSize="@dimen/font_size_16" />
 
     <LinearLayout
-        android:weightSum="2"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/editTextTenCV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTenCV"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/buttonThem"
@@ -41,11 +41,11 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
-            android:text="Thêm"
-            android:textSize="24sp" />
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_size_16" />
 
         <Button
-            android:layout_weight="1"
             android:id="@+id/buttonHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,8 +55,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="8dp"
             android:layout_toRightOf="@id/buttonThem"
+            android:layout_weight="1"
             android:text="Hủy"
-            android:textSize="24sp" />
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_size_16" />
 
     </LinearLayout>
 </RelativeLayout>
