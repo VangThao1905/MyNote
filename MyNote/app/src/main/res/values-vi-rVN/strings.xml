@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyNote</string>
+    <string name="list_job">Danh Sách Công Việc</string>
+    <string name="text_edit_job">Sửa công việc</string>
+    <string name="type_job_name">Nhập tên công việc</string>
+    <string name="text_confirm">Xác nhận</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_add_job">Thêm công việc</string>
+    <string name="add">Thêm</string>
+    <string name="text_job_name">Tên công việc</string>
+    <string name="please_type_job_name">Vui lòng nhập tên công việc!</string>
+    <string name="added_new_job">Đã thêm công việc mới!</string>
+    <string name="updated_job">Đã sửa công việc!</string>
+    <string name="deleted_job">"Đã xóa công việc "</string>
+    <string name="exclamation_mark">!</string>
+    <string name="do_you_want_delete_this_job">Bạn có muốn xóa công việc [%s] không?</string>
+    <string name="no">Không</string>
+    <string name="yes">Có</string>
+</resources>

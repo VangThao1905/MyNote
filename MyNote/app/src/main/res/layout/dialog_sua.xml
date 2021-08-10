@@ -10,15 +10,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Sửa công việc"
+        android:text="@string/text_edit_job"
         android:textAlignment="center"
         android:textColor="#ff00"
-        android:textSize="30sp"
+        android:textSize="@dimen/font_size_16"
         android:textStyle="bold" />
 
     <EditText
-        android:textSize="26sp"
-        android:hint="Nhập tên công việc"
+        android:textSize="@dimen/font_size_16"
+        android:hint="@string/type_job_name"
         android:id="@+id/editTextTenCVEdit"
         android:layout_marginTop="20dp"
         android:layout_below="@id/textSuaCV"
@@ -32,6 +32,7 @@
         android:weightSum="2">
 
         <Button
+            android:textAllCaps="false"
             android:layout_weight="1"
             android:id="@+id/buttonXacNhan"
             android:layout_width="match_parent"
@@ -41,10 +42,11 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="20dp"
-            android:text="Xác nhận"
-            android:textSize="24sp" />
+            android:text="@string/text_confirm"
+            android:textSize="@dimen/font_size_16" />
 
         <Button
+            android:textAllCaps="false"
             android:layout_weight="1"
             android:id="@+id/buttonHuyEdit"
             android:layout_width="match_parent"
@@ -56,8 +58,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="8dp"
             android:layout_toRightOf="@id/buttonXacNhan"
-            android:text="Hủy"
-            android:textSize="24sp" />
+            android:text="@string/text_cancel"
+            android:textSize="@dimen/font_size_16" />
 
     </LinearLayout>
 </RelativeLayout>
