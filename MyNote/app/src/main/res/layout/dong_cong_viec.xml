@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_8">
+
+    <CheckBox
+        android:buttonTint="@android:color/holo_green_light"
+        android:id="@+id/checkboxJobDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_4"
+        android:id="@+id/textViewTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_toStartOf="@+id/imageViewDelete"
+        android:layout_toLeftOf="@+id/imageViewDelete"
+        android:layout_toRightOf="@id/checkboxJobDone"
+        android:text="@string/text_job_name"
+        android:textColor="#000000"
+        android:textSize="@dimen/font_size_16"
+        android:layout_toEndOf="@id/checkboxJobDone" />
+
+    <TextView
+        android:format12Hour="dd/MM/yyyy"
+        android:format24Hour="dd/MM/yyyy"
+        android:layout_toRightOf="@id/textViewTen"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_below="@id/checkboxJobDone"
+        android:id="@+id/txt_time_add"
+        android:textSize="@dimen/font_size_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_toEndOf="@id/checkboxJobDone" />
+
+    <ImageView
+        android:id="@+id/imageViewDelete"
+        android:layout_width="@dimen/width_24"
+        android:layout_height="@dimen/height_24"
+        android:layout_toStartOf="@id/imageViewEdit"
+        android:layout_toLeftOf="@id/imageViewEdit"
+        android:contentDescription="@null"
+        android:src="@drawable/delete" />
+
+    <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="@dimen/width_24"
+        android:layout_height="@dimen/height_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:contentDescription="@null"
+        android:src="@drawable/edit" />
+
+
+</RelativeLayout>
