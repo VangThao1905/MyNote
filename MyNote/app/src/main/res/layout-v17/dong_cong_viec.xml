@@ -2,9 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="@dimen/padding_8">
 
+    <TextView
+        android:id="@+id/textViewTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:maxLines="10"
+        android:lines="2"
+        android:ellipsize="end"
+        android:layout_toStartOf="@+id/imageViewDelete"
+        android:layout_toLeftOf="@+id/imageViewDelete"
+        android:layout_toEndOf="@id/checkboxJobDone"
+        android:layout_toRightOf="@id/checkboxJobDone"
+        android:text="@string/text_job_name"
+        android:textColor="#000000"
+        android:textSize="@dimen/font_size_14" />
+
     <CheckBox
+        android:buttonTint="@android:color/holo_green_light"
         android:id="@+id/checkboxJobDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,35 +33,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" />
 
-    <TextView
-        android:layout_marginTop="@dimen/margin_4"
-        android:id="@+id/textViewTen"
+    <RelativeLayout
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingRight="@dimen/padding_8"
+        android:layout_below="@id/textViewTen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="@dimen/margin_8"
-        android:layout_marginRight="@dimen/margin_8"
-        android:layout_toStartOf="@+id/imageViewDelete"
-        android:layout_toLeftOf="@+id/imageViewDelete"
-        android:layout_toRightOf="@id/checkboxJobDone"
-        android:text="@string/text_job_name"
-        android:textColor="#000000"
-        android:textSize="@dimen/font_size_16"
-        android:layout_toEndOf="@id/checkboxJobDone" />
-
-    <TextView
-        android:format12Hour="dd/MM/yyyy"
-        android:format24Hour="dd/MM/yyyy"
-        android:layout_toRightOf="@id/textViewTen"
-        android:layout_marginEnd="@dimen/margin_16"
-        android:layout_below="@id/checkboxJobDone"
-        android:id="@+id/txt_time_add"
-        android:textSize="@dimen/font_size_12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_16"
-        android:layout_marginRight="@dimen/margin_16"
-        android:layout_toEndOf="@id/checkboxJobDone" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:paddingStart="@dimen/padding_8">
+        <TextView
+            android:id="@+id/txt_time_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTen"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_toEndOf="@id/checkboxJobDone"
+            android:layout_toRightOf="@id/textViewTen"
+            android:format12Hour="dd/MM/yyyy"
+            android:format24Hour="dd/MM/yyyy"
+            android:textSize="@dimen/font_size_12" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageViewDelete"
