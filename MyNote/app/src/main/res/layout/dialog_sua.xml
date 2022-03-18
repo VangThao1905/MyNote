@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="10dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/textSuaCV"
@@ -13,17 +13,17 @@
         android:text="@string/text_edit_job"
         android:textAlignment="center"
         android:textColor="#ff00"
-        android:textSize="@dimen/font_size_16"
+        android:textSize="@dimen/font_size_14"
         android:textStyle="bold" />
 
     <EditText
-        android:textSize="@dimen/font_size_16"
-        android:hint="@string/type_job_name"
         android:id="@+id/editTextTenCVEdit"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/textSuaCV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSuaCV"
+        android:layout_marginTop="20dp"
+        android:hint="@string/type_job_name"
+        android:textSize="@dimen/font_size_14" />
 
     <LinearLayout
         android:layout_width="401dp"
@@ -32,8 +32,6 @@
         android:weightSum="2">
 
         <Button
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:id="@+id/buttonXacNhan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,12 +40,12 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="20dp"
+            android:layout_weight="1"
             android:text="@string/text_confirm"
-            android:textSize="@dimen/font_size_16" />
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_size_14" />
 
         <Button
-            android:textAllCaps="false"
-            android:layout_weight="1"
             android:id="@+id/buttonHuyEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,8 +56,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="8dp"
             android:layout_toRightOf="@id/buttonXacNhan"
+            android:layout_weight="1"
             android:text="@string/text_cancel"
-            android:textSize="@dimen/font_size_16" />
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_size_14" />
 
     </LinearLayout>
 </RelativeLayout>
