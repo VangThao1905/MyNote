@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.136" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout-v17/dong_cong_viec.xml" value="0.27291666666666664" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout-v21/dong_cong_viec.xml" value="0.27291666666666664" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout/dialog_sua.xml" value="0.27291666666666664" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout/dialog_them_cong_viec.xml" value="0.27291666666666664" />
         <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/layout/dong_cong_viec.xml" value="0.27291666666666664" />
+        <entry key="..\:/MyProjects/mynote/MyNote/MyNote/app/src/main/res/mipmap-anydpi-v26/icon_app_mynote.xml" value="0.136" />
       </map>
     </option>
   </component>
